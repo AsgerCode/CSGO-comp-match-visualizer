@@ -85,15 +85,17 @@ const Analyze = ({ logInfo }: ServerSideProps) => {
                         </thead>
                         <tbody>
                             {
-                                logInfo.playerScores.map(element => {
-                                    return (
-                                        <tr>
-                                            <td>{element.name}</td>
-                                            <td>{element.kills}</td>
-                                            <td>{element.deaths}</td>
-                                        </tr>
-                                    )
-                                })
+                                React.Children.toArray(
+                                    logInfo.playerScores.map(({ name, kills, deaths }) => {
+                                        return (
+                                            <tr>
+                                                <td>{name}</td>
+                                                <td>{kills}</td>
+                                                <td>{deaths}</td>
+                                            </tr>
+                                        )
+                                    })
+                                )
                             }
                         </tbody>
                     </table>
@@ -114,15 +116,17 @@ const Analyze = ({ logInfo }: ServerSideProps) => {
                         </thead>
                         <tbody>
                             {
-                                logInfo.nemesis.map(element => {
-                                    return (
-                                        <tr>
-                                            <td>{element.name}</td>
-                                            <td>{element.target}</td>
-                                            <td>{element.kills}</td>
-                                        </tr>
-                                    )
-                                })
+                                React.Children.toArray(
+                                    logInfo.nemesis.map(({ name, target, kills }) => {
+                                        return (
+                                            <tr>
+                                                <td>{name}</td>
+                                                <td>{target}</td>
+                                                <td>{kills}</td>
+                                            </tr>
+                                        )
+                                    })
+                                )
                             }
                         </tbody>
                     </table>
@@ -159,15 +163,17 @@ const Analyze = ({ logInfo }: ServerSideProps) => {
                             </thead>
                             <tbody>
                                 {
-                                    timeline.map(element => {
-                                        return (
-                                            <tr>
-                                                <td>{element.name}</td>
-                                                <td>{element.kills}</td>
-                                                <td>{element.deaths}</td>
-                                            </tr>
-                                        )
-                                    })
+                                    React.Children.toArray(
+                                        timeline.map(({ name, kills, deaths }) => {
+                                            return (
+                                                <tr>
+                                                    <td>{name}</td>
+                                                    <td>{kills}</td>
+                                                    <td>{deaths}</td>
+                                                </tr>
+                                            )
+                                        })
+                                    )
                                 }
                             </tbody>
                         </table>

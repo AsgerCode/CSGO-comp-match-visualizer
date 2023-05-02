@@ -4,7 +4,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 export const config = {
     api: {
         bodyParser: {
-            sizeLimit: '4mb' // Set desired value here
+            sizeLimit: '4mb' // Logs are a bit bigger than the default 1mb limit.
         }
     }
 };

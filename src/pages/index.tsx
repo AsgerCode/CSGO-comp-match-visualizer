@@ -17,6 +17,7 @@ const Home: FC = () => {
           method: 'POST'
         };
         const content = reader.result.toString();
+        // api request to upload the log
         const req = http.request(options, (res) => {
           let data = '';
           res.on('data', (chunk) => {
@@ -28,7 +29,6 @@ const Home: FC = () => {
               pathname: '/analyze',
               query: { logId: JSON.parse(data).message },
             });
-            console.log(data)
           })
         });
         req.write(content);
