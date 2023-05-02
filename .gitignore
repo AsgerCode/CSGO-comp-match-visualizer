@@ -35,4 +35,7 @@ yarn-error.log*
 next-env.d.ts
 
 ## logs
-/src/data/logs/*
+src/data/logs/*.txt
+
+## test snapshots
+tests/pages/__snapshots__
