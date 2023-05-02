@@ -34,8 +34,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-## logs
-src/data/logs/*.txt
-
 ## test snapshots
-tests/pages/__snapshots__
+__snapshots__/
